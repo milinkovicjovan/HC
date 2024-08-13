@@ -11,6 +11,7 @@ module.exports = {
         redCustom: "#E05F7E",
         grayCustom: "#E9E9E9",
         blueCustom: "#E6F0FF",
+        purpleCustom: "#EADDFF",
       },
     },
   },

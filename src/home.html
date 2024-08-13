@@ -7,6 +7,12 @@
     <link href="output.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
   </head>
+  <style>
+    img {
+      width: 100%;
+      height: auto;
+    }
+  </style>
   <body>
     <div class="m-auto max-w-[1920px]">
       <div class="flex justify-center flex-col text-center m-24">
@@ -30,70 +36,87 @@
           >
         </button>
       </div>
-      <!-- <div class="grid grid-cols-3 gap-4 p-4 max-w-[1300px] m-auto">
-       
-        <div class="bg-pinkCustom rounded-3xl p-9 flex justify-center flex-col">
-          <img src="img/Sasa-Popovic.png" />
-          <h3 class="font-bold text-2xl uppercase pt-6">Our Origin Story</h3>
-          <p class="py-4 text-base">
-            Meet Sasha, founder of Vega IT, who felt the rhythm of his company
-            fade as it grew from 3 to 800 employees. Feeling a disconnect,
-            HeartCount was built as a lifeline to bridge the gap and nurture the
-            well-being of his employees. Today, HeartCount supports companies
-            globally that prioritize employee engagement and cultivate
-            connections throughout their organizations.
-          </p>
-          <div>
-            <p class="font-bold text-base">Sasa Popovic</p>
-            <p class="text-base">CEO and co-founder of VegaIT</p>
-          </div>
-        </div>
-        <div>
-          <div class="bg-blue-500 h-24"></div>
-          <div class="bg-green-500 h-24"></div>
-        </div>
-
-        <div class="bg-yellow-500 h-24 col-span-1"></div>
-        <div class="bg-purple-500 h-24 col-span-2"></div>
-      </div> -->
       <div class="grid grid-cols-3 gap-4 p-4 max-w-[1300px] m-auto">
         <!-- First Row: 1fr 2fr -->
-        <div
-          class="bg-pinkCustom rounded-3xl p-8 flex justify-center flex-col col-span-1"
-        >
-          <img src="img/Sasa-Popovic.png" />
-          <h3 class="font-bold text-2xl uppercase pt-6">Our Origin Story</h3>
-          <p class="py-4 text-base">
-            Meet Sasha, founder of Vega IT, who felt the rhythm of his company
-            fade as it grew from 3 to 800 employees. Feeling a disconnect,
-            HeartCount was built as a lifeline to bridge the gap and nurture the
-            well-being of his employees. Today, HeartCount supports companies
-            globally that prioritize employee engagement and cultivate
-            connections throughout their organizations.
-          </p>
-          <div>
-            <p class="font-bold text-base">Sasa Popovic</p>
-            <p class="text-base">CEO and co-founder of VegaIT</p>
+        <div>
+          <div
+            class="bg-pinkCustom rounded-3xl p-8 flex justify-center flex-col col-span-1"
+          >
+            <img src="img/Sasa-Popovic.png" style="max-width: 344px" />
+            <h3 class="font-bold text-2xl uppercase pt-6">Our Origin Story</h3>
+            <p class="py-4 text-base">
+              Meet Sasha, founder of Vega IT, who felt the rhythm of his company
+              fade as it grew from 3 to 800 employees. Feeling a disconnect,
+              HeartCount was built as a lifeline to bridge the gap and nurture
+              the well-being of his employees. Today, HeartCount supports
+              companies globally that prioritize employee engagement and
+              cultivate connections throughout their organizations.
+            </p>
+            <div>
+              <p class="font-bold text-base">Sasa Popovic</p>
+              <p class="text-base">CEO and co-founder of VegaIT</p>
+            </div>
+          </div>
+          <div class="bg-redCustom rounded-3xl p-8 mt-4">
+            <img src="img/Purpose.png" style="max-width: 83px" />
+            <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+              Our purpose
+            </h3>
+            <p class="text-white pt-4 text-xl">
+              Help people be seen, heard, and valued, creating organizations
+              where people feel they belong and know they matter.
+            </p>
+          </div>
+          <div class="bg-grayCustom rounded-3xl p-8 mt-4">
+            <div class="flex w-full">
+              <div class="w-2/5">
+                <img src="img/Dusan Milicevic.png" style="max-width: 102px" />
+              </div>
+              <div class="flex justify-end flex-col w-4/5">
+                <p class="font-bold text-base">Dusan Milicevic</p>
+                <p class="text-base">
+                  GM at
+                  <span class="underline">Comtrade System Integration</span>
+                </p>
+              </div>
+            </div>
+            <p class="text-sm pt-4">
+              "The Customizable Questions allowed us to focus on specific
+              aspects crucial to our team's success. By implementing Employee's
+              Suggestions gathered through HeartCount we made CTSI a better
+              place to work."
+            </p>
           </div>
         </div>
-
         <!-- Second Column: 2fr with nested grid -->
         <div class="col-span-2">
           <!-- Option 1: 1fr 1fr inside the 2fr column -->
           <div class="grid grid-cols-2 gap-4">
             <div class="bg-redCustom rounded-3xl p-8">
-              <img src="img/Mission.png" />
+              <img src="img/Mission.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
                 The mission
               </h3>
-              <p class="text-white">
+              <p class="text-white pt-4 text-xl">
                 Build a growing, sustainable movement of organizations who
                 create positive, lasting, people- focused cultures by counting
                 hearts, not heads.
               </p>
             </div>
             <div class="bg-grayCustom rounded-3xl p-8">
-              <p class="text-sm">
+              <div class="flex w-full">
+                <div class="w-2/5">
+                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
+                </div>
+                <div class="flex justify-end flex-col w-4/5">
+                  <p class="font-bold text-base">Olga Arsov</p>
+                  <p class="text-base">
+                    Employee Experience Specialist at
+                    <span class="underline">Headquarters</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-sm pt-4">
                 HeartCount allows us to determine how our people are feeling and
                 build stronger bonds between teammates. The platform itself
                 supports employers who care for their teams, completely aligning
@@ -105,31 +128,82 @@
               </p>
             </div>
           </div>
-
-          <!-- Option 2: Single 2fr inside the 2fr column (comment out the other option) -->
-          <div class="bg-blueCustom p-4 grid grid-cols-3 gap-4 rounded-3xl">
+          <div class="bg-blueCustom p-8 rounded-3xl mt-4 flex w-full">
             <!-- Image Column: 1fr -->
-            <div class="col-span-1 flex items-center">
-              <img src="img/Garry Ridge.png" alt="Garry Ridge" />
+            <div class="flex items-center w-1/3">
+              <img
+                src="img/Garry Ridge.png"
+                style="max-width: 200px; max-height: 244px; object-fit: cover"
+                alt="Garry Ridge"
+                class="rounded-3xl"
+              />
             </div>
 
             <!-- Text Column: 2fr -->
-            <div class="col-span-2">
-              <h3 class="font-bold text-2xl uppercase pt-6">
-                Our Origin Story
-              </h3>
-              <p class="py-4 text-base">
-                Meet Sasha, founder of Vega IT, who felt the rhythm of his
-                company fade as it grew from 3 to 800 employees. Feeling a
-                disconnect, HeartCount was built as a lifeline to bridge the gap
-                and nurture the well-being of his employees. Today, HeartCount
-                supports companies globally that prioritize employee engagement
-                and cultivate connections throughout their organizations.
+            <div class="w-3/4">
+              <h3 class="font-bold text-2xl uppercase">Feel the Pulse</h3>
+              <p class="pt-4 pb-6 text-base">
+                "Having served as a US public company CEO for 25 years I know
+                success is all about the people we serve.  HeartCount gives
+                leaders the data they need to keep their finger on the pulse,
+                the heartbeat of the company in real time.  HeartCount doesn’t
+                ask how the company is doing, it shows you how your people are
+                feeling.”
               </p>
               <div>
-                <p class="font-bold text-base">Sasa Popovic</p>
-                <p class="text-base">CEO and co-founder of VegaIT</p>
+                <p class="font-bold text-base">Garry Ridge</p>
+                <p class="text-base">
+                  Chairman Emeritus at WD-40 Company & Co-Founder HeartCount
+                  Global
+                </p>
               </div>
+            </div>
+          </div>
+          <div class="mt-4 flex w-full max-h-80">
+            <video
+              src="img/HC_video.mp4"
+              autoplay
+              loop
+              muted
+              playsinline
+              class="w-full h-full object-cover rounded-3xl max-h-80"
+            ></video>
+          </div>
+          <div class="grid grid-cols-2 gap-4">
+            <div class="bg-redCustom rounded-3xl p-8">
+              <img src="img/Mission.png" style="max-width: 83px" />
+              <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+                The mission
+              </h3>
+              <p class="text-white pt-4 text-xl">
+                Build a growing, sustainable movement of organizations who
+                create positive, lasting, people- focused cultures by counting
+                hearts, not heads.
+              </p>
+            </div>
+            <div class="bg-grayCustom rounded-3xl p-8">
+              <div class="flex w-full">
+                <div class="w-2/5">
+                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
+                </div>
+                <div class="flex justify-end flex-col w-4/5">
+                  <p class="font-bold text-base">Olga Arsov</p>
+                  <p class="text-base">
+                    Employee Experience Specialist at
+                    <span class="underline">Headquarters</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-sm pt-4">
+                HeartCount allows us to determine how our people are feeling and
+                build stronger bonds between teammates. The platform itself
+                supports employers who care for their teams, completely aligning
+                with the fact that the most valuable asset of any organization
+                is their employees. As a professional who'd just started
+                building a career in HR, HeartCount personally helped me set up
+                short term goals for myself and learn how to design proposals
+                concerning EX to upper management.
+              </p>
             </div>
           </div>
         </div>
