@@ -6,22 +6,76 @@
     <title>Document</title>
     <link href="output.css" rel="stylesheet" />
     <link href="styles.css" rel="stylesheet" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
+      rel="stylesheet"
+    />
   </head>
   <style>
     img {
       width: 100%;
       height: auto;
     }
+    .image-set {
+      display: none;
+    }
+    .image-set img {
+      max-width: 100%;
+      height: auto;
+      border: 20px solid #e9e9e9;
+      border-radius: 30px;
+    }
+    .active-button-slider {
+      background-color: #ccc;
+    }
+
+    .button-change-container {
+      display: flex;
+      justify-content: center;
+    }
+
+    .change-image-button.active-button-slider {
+      background-color: #e05f7e;
+      color: white;
+    }
+
+    /* Button styles */
+    .change-image-button {
+      background-color: white;
+      font-size: 13px;
+      color: black;
+      border: 2.5px solid #e9e9e9;
+      border-radius: 50px;
+      padding: 10px 20px;
+      margin-right: 20px;
+      cursor: pointer;
+      transition: background-color 0.3s ease;
+    }
+
+    .change-image-button:last-child {
+      margin-right: 0;
+    }
   </style>
   <body>
+    <div class="max-w-[1920px] fixed -top-40 w-3/4 -z-10" style="left: 45%">
+      <img
+        src="img/HC-LogoMonster-1024x1024.png"
+        alt="Fixed Image"
+        class="h-full w-auto mx-auto"
+      />
+    </div>
     <div class="m-auto max-w-[1920px]">
       <div class="flex justify-center flex-col text-center m-24">
-        <h1 class="tk-new-order font-bold text-black text-7xl mb-4">
+        <h1
+          class="font-new-order font-bold text-black text-3xl sm:text-7xl mb-4"
+        >
           Creating a workplace<br />
           where people actually<br />
           want to work
         </h1>
-        <p class="tk-new-order mb-20">
+        <p class="hidden sm:block font-new-order mb-20">
           HeartCount is an employee experience platform that gives employees a
           voice<br />
           and organizations the chance to create a company culture where people
@@ -31,7 +85,7 @@
         <button>
           <a
             href=""
-            class="tk-new-order bg-black text-white py-5 px-10 rounded-full"
+            class="font-new-order bg-black text-white py-5 px-10 rounded-full"
             >SEE HOW IT WORKS</a
           >
         </button>
@@ -62,7 +116,7 @@
             <h3 class="font-bold text-2xl uppercase pt-6 text-white">
               Our purpose
             </h3>
-            <p class="text-white pt-4 text-xl">
+            <p class="text-white pt-4 pb-14 text-xl">
               Help people be seen, heard, and valued, creating organizations
               where people feel they belong and know they matter.
             </p>
@@ -169,45 +223,335 @@
               class="w-full h-full object-cover rounded-3xl max-h-80"
             ></video>
           </div>
-          <div class="grid grid-cols-2 gap-4">
-            <div class="bg-redCustom rounded-3xl p-8">
-              <img src="img/Mission.png" style="max-width: 83px" />
-              <h3 class="font-bold text-2xl uppercase pt-6 text-white">
-                The mission
-              </h3>
-              <p class="text-white pt-4 text-xl">
-                Build a growing, sustainable movement of organizations who
-                create positive, lasting, people- focused cultures by counting
-                hearts, not heads.
+          <div class="grid grid-cols-2 gap-4 mt-4">
+            <div class="bg-purpleCustom w-full flex rounded-3xl p-8">
+              <div class="w-2/4 pr-6">
+                <img src="img/Times.png" />
+              </div>
+              <div class="w-2/4">
+                <h3 class="font-bold text-2xl uppercase">CALLING IT QUITS</h3>
+                <p class="pt-4 text-xl">
+                  Build a growing, sustainable movement of organizations who
+                  create positive, lasting, people- focused cultures by counting
+                  hearts, not heads.
+                </p>
+              </div>
+            </div>
+            <div class="rounded-3xl">
+              <img src="img/Hearts not heads podcast.png" />
+            </div>
+          </div>
+        </div>
+        <div class="bg-blueCustom col-span-2 p-8 rounded-3xl flex w-full">
+          <div class="flex w-1/3">
+            <img
+              src="img/Davin Salvagno.png"
+              style="max-width: 230px; max-height: 220px; object-fit: cover"
+              alt="Garry Ridge"
+              class="rounded-3xl"
+            />
+          </div>
+          <div class="w-2/3">
+            <h3 class="font-bold text-2xl uppercase">Feel the Pulse</h3>
+            <p class="pt-4 pb-6 text-base">
+              “Every organization starts with a purpose, and they invite people
+              to be a part of that purpose. As they scale, they put processes in
+              place to support their people, they start to measure performance,
+              and hopefully they make a profit. But all too often we start to
+              focus on process, performance, and profit, and we lose the pulse
+              of our purpose and our people. I believe HeartCount was created to
+              help leaders get that pulse back.”
+            </p>
+            <div>
+              <p class="font-bold text-base">Davin Salvagno</p>
+              <p class="text-base">
+                Founder and CEO of Purpose Point & The Purpose Summit
               </p>
             </div>
-            <div class="bg-grayCustom rounded-3xl p-8">
-              <div class="flex w-full">
-                <div class="w-2/5">
-                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
-                </div>
-                <div class="flex justify-end flex-col w-4/5">
-                  <p class="font-bold text-base">Olga Arsov</p>
-                  <p class="text-base">
-                    Employee Experience Specialist at
-                    <span class="underline">Headquarters</span>
-                  </p>
-                </div>
+          </div>
+        </div>
+        <div class="bg-redCustom col-span-1 rounded-3xl p-8">
+          <img src="img/world.png" style="max-width: 83px" />
+          <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+            The vision
+          </h3>
+          <p class="text-white pt-4 text-xl">
+            A world where healthy organizations create happy employees, who
+            contribute to a happier world.
+          </p>
+        </div>
+      </div>
+      <div class="bg-black sm:bg-darkBlueCustom w-full mt-24">
+        <div
+          class="max-w-[1300px] m-auto text-white flex flex-col sm:flex-row items-center py-20 px-8 xl:px-0"
+        >
+          <div class="w-full sm:w-1/3">
+            <h3 class="font-new-order text-2xl sm:text-5xl font-semibold pb-4">
+              Create complex workflows instantly
+            </h3>
+            <p class="text-xl pb-6">
+              seamless integration of HeartCount with all major HRIS and
+              communication platforms
+            </p>
+            <button
+              class="bg-white text-darkBlueCustom font-bold py-4 px-8 text-lg rounded-full"
+            >
+              Learn More
+            </button>
+          </div>
+          <div
+            class="w-full sm:w-2/3 pt-10 sm:pt-0 sm:pl-24 flex flex-wrap gap-4"
+          >
+            <img src="img/slack.png" class="w-20 h-20" />
+            <img src="img/Google workspace.png" class="w-20 h-20" />
+            <img src="img/Frame 78.png" class="w-20 h-20" />
+            <img src="img/acta.png" class="w-20 h-20" />
+            <img src="img/paycor.png" class="w-20 h-20" />
+            <img src="img/w.png" class="w-20 h-20" />
+            <img src="img/sap.png" class="w-20 h-20" />
+            <img src="img/adp.png" class="w-20 h-20" />
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1300px] m-auto mt-24">
+        <div class="image-set" id="image-1" style="display: block">
+          <img src="img/semiannual report.png" />
+          <p class="text-center py-16 font-new-order text-3xl">
+            The Semi-Annual Report offers a comprehensive summary of your
+            company’s status over the two halves of each year, focusing on
+            well-being, engagement, and employee feedback.<br />
+            <br />
+            This report details the statistics and scores for each employee
+            experience category surveyed during a six month period. It also
+            includes an in-depth analysis of every survey question.
+          </p>
+        </div>
+        <div class="image-set" id="image-2">
+          <img src="img/summary.png" />
+          <p class="text-center py-16 font-new-order text-3xl">
+            The Summary Page is your starting point when you log into the
+            portal<br />
+            <br />
+            On the Summary Page you'll find key information about the current
+            Pulse Check survey and predefined periods for analyzing survey data
+            over time (monthly, quarterly, semi-annually, and annually).
+          </p>
+        </div>
+        <div class="image-set mb-16" id="image-3">
+          <img src="img/employee overview.png" />
+        </div>
+        <div class="image-set mb-16" id="image-4">
+          <img src="img/teams overview.png" />
+        </div>
+        <div class="image-set mb-16" id="image-5">
+          <img src="img/feedforward.png" />
+        </div>
+
+        <!-- Buttons -->
+        <div class="button-change-container">
+          <button
+            class="change-image-button active-button-slider"
+            data-target="image-1"
+          >
+            SEMIANNUAL REPORT
+          </button>
+          <button class="change-image-button" data-target="image-2">
+            SUMMARY
+          </button>
+          <button class="change-image-button" data-target="image-3">
+            EMPLOYEE OVERVIEW
+          </button>
+          <button class="change-image-button" data-target="image-4">
+            TEAMS OVERVIEW
+          </button>
+          <button class="change-image-button" data-target="image-5">
+            FEEDFORWARD
+          </button>
+        </div>
+      </div>
+      <div class="bg-lightBlueCustom w-full mt-24 bg-opacity-20 py-16">
+        <div class="max-w-[1300px] w-full flex items-center m-auto">
+          <div class="w-1/3 pr-14">
+            <h3
+              class="font-new-order text-5xl font-semibold pb-5 leading-tight"
+            >
+              Understand Your Employees.  Drive Positive Business Outcomes.
+            </h3>
+            <p class="font-plus-jakarta">
+              With an integrated set of employee engagement and well-being
+              metrics, you can understand how your employees feel over time, act
+              on feedback and drive performance.
+            </p>
+          </div>
+          <div class="w-2/3">
+            <div class="flex items-center mb-4">
+              <div>
+                <img
+                  src="img/employees-placeholder.png"
+                  class="min-w-[400px] pr-7"
+                />
               </div>
-              <p class="text-sm pt-4">
-                HeartCount allows us to determine how our people are feeling and
-                build stronger bonds between teammates. The platform itself
-                supports employers who care for their teams, completely aligning
-                with the fact that the most valuable asset of any organization
-                is their employees. As a professional who'd just started
-                building a career in HR, HeartCount personally helped me set up
-                short term goals for myself and learn how to design proposals
-                concerning EX to upper management.
+              <div>
+                <h3 class="font-new-order font-bold text-3xl pb-3">
+                  ONBOARDING
+                </h3>
+                <p class="font-plus-jakarta text-base font-normal">
+                  Be operational from the first day. Our customer success team
+                  will ensure a smooth transition and integration of HeartCount
+                  within your organization.  
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <div>
+                <img
+                  src="img/employees-placeholder.png"
+                  class="min-w-[400px] pr-7"
+                />
+              </div>
+              <div>
+                <h3 class="font-new-order font-bold text-3xl pb-3">
+                  PERSONALIZED TRAINING
+                </h3>
+                <p class="font-plus-jakarta text-base font-normal">
+                  Our customer success team provides your team members with
+                  guidance on how to utilize HeartCount features to meet their
+                  specific needs and goals. 
+                </p>
+              </div>
+            </div>
+            <div class="flex items-center mb-4">
+              <div>
+                <img
+                  src="img/employees-placeholder.png"
+                  class="min-w-[400px] pr-7"
+                />
+              </div>
+              <div>
+                <h3 class="font-new-order font-bold text-3xl pb-3">
+                  DEDICATED SUPPORT
+                </h3>
+                <p class="font-plus-jakarta text-base font-normal">
+                  If you have any questions, concerns, or recommendations along
+                  the way, our customer success team will be there to assist
+                  you. 
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="max-w-[1300px] m-auto my-24">
+        <h3 class="font-bold text-4xl font-plus-jakarta mb-6">
+          Develop Engaged and High-Performing Teams
+        </h3>
+        <a href="#">SEE ALL ARTICLES</a>
+        <div class="flex gap-8 mt-3">
+          <div class="bg-black text-white rounded-3xl">
+            <img src="img/blog-placeholder.png" />
+            <div class="p-7">
+              <div class="flex justify-between items-center">
+                <p>2 October</p>
+                <p>by <span class="underline">Lorem Ipsum</span></p>
+              </div>
+              <h3 class="font-plus-jakarta font-bold text-3xl pt-6 pb-4">
+                BLOG
+              </h3>
+              <p class="pb-7 font-plus-jakarta">
+                Learn about the fundamentals of providing the best employee
+                experience that will boost employee engagement and help them
+                feel valued.
               </p>
+              <div class="flex justify-between items-center">
+                <button
+                  class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
+                >
+                  READ MORE
+                </button>
+                <p>4 minute read</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-black text-white rounded-3xl">
+            <img src="img/blog-placeholder.png" />
+            <div class="p-7">
+              <div class="flex justify-between items-center">
+                <p>2 October</p>
+                <p>by <span class="underline">Lorem Ipsum</span></p>
+              </div>
+              <h3 class="font-plus-jakarta font-bold text-3xl pt-6 pb-4">
+                SUCCESS STORIES
+              </h3>
+              <p class="pb-7 font-plus-jakarta">
+                Learn about the fundamentals of providing the best employee
+                experience that will boost employee engagement and help them
+                feel valued.
+              </p>
+              <div class="flex justify-between items-center">
+                <button
+                  class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
+                >
+                  READ MORE
+                </button>
+                <p>4 minute read</p>
+              </div>
+            </div>
+          </div>
+          <div class="bg-black text-white rounded-3xl">
+            <img src="img/blog-placeholder.png" />
+            <div class="p-7">
+              <div class="flex justify-between items-center">
+                <p>2 October</p>
+                <p>by <span class="underline">Lorem Ipsum</span></p>
+              </div>
+              <h3 class="font-plus-jakarta font-bold text-3xl pt-6 pb-4">
+                WEBINARS
+              </h3>
+              <p class="pb-7 font-plus-jakarta">
+                Learn about the fundamentals of providing the best employee
+                experience that will boost employee engagement and help them
+                feel valued.
+              </p>
+              <div class="flex justify-between items-center">
+                <button
+                  class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
+                >
+                  READ MORE
+                </button>
+                <p>4 minute read</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
   </body>
+  <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      var buttons = document.querySelectorAll(".change-image-button");
+      var imageSets = document.querySelectorAll(".image-set");
+
+      buttons.forEach(function (button) {
+        button.addEventListener("click", function () {
+          var targetId = this.getAttribute("data-target");
+
+          // Hide all image sets
+          imageSets.forEach(function (imageSet) {
+            imageSet.style.display = "none";
+          });
+
+          // Remove active class from all buttons
+          buttons.forEach(function (btn) {
+            btn.classList.remove("active-button-slider");
+          });
+
+          // Show the targeted image set
+          document.getElementById(targetId).style.display = "block";
+
+          // Add active class to the clicked button
+          this.classList.add("active-button-slider");
+        });
+      });
+    });
+  </script>
 </html>

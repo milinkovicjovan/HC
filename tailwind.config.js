@@ -5,6 +5,7 @@ module.exports = {
     extend: {
       fontFamily: {
         "new-order": ['"new-order"', "sans-serif"],
+        "plus-jakarta": ['"plus-jakarta-sans"', "sans-serif"],
       },
       colors: {
         pinkCustom: "#FFDDEE",
@@ -12,6 +13,11 @@ module.exports = {
         grayCustom: "#E9E9E9",
         blueCustom: "#E6F0FF",
         purpleCustom: "#EADDFF",
+        darkBlueCustom: "#05285B",
+        lightBlueCustom: "#00BEF2",
+      },
+      borderRadius: {
+        "3xl": "28px",
       },
     },
   },
