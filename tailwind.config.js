@@ -15,6 +15,7 @@ module.exports = {
         purpleCustom: "#EADDFF",
         darkBlueCustom: "#05285B",
         lightBlueCustom: "#00BEF2",
+        HCDark: "#0D0F1C",
       },
       borderRadius: {
         "3xl": "28px",

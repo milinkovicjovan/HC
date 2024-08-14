@@ -213,7 +213,9 @@
               </div>
             </div>
           </div>
-          <div class="mt-4 flex w-full max-h-80">
+          <!-- Video Container with Play Button -->
+          <div class="mt-4 relative w-full max-h-80">
+            <!-- Video -->
             <video
               src="img/HC_video.mp4"
               autoplay
@@ -222,7 +224,44 @@
               playsinline
               class="w-full h-full object-cover rounded-3xl max-h-80"
             ></video>
+
+            <!-- Play Button -->
+            <img
+              src="img/Play.png"
+              alt="Play Button"
+              class="absolute top-4 right-4 cursor-pointer w-12 h-12"
+              onclick="openPopup()"
+            />
           </div>
+
+          <!-- Popup Modal (Initially Hidden) -->
+          <div
+            id="videoPopup"
+            class="fixed inset-0 bg-black bg-opacity-75 flex justify-center items-center hidden"
+            onclick="closePopup()"
+          >
+            <div
+              class="relative w-full max-w-4xl p-4 bg-white rounded-3xl"
+              onclick="event.stopPropagation()"
+            >
+              <!-- Close Button -->
+              <button
+                onclick="closePopup()"
+                class="absolute top-4 right-4 text-black text-2xl font-bold"
+              >
+                &times;
+              </button>
+              <!-- Popup Video -->
+              <video
+                src="img/HC_popup.mp4"
+                controls
+                autoplay
+                muted
+                class="w-full rounded-3xl"
+              ></video>
+            </div>
+          </div>
+
           <div class="grid grid-cols-2 gap-4 mt-4">
             <div class="bg-purpleCustom w-full flex rounded-3xl p-8">
               <div class="w-2/4 pr-6">
@@ -281,7 +320,7 @@
           </p>
         </div>
       </div>
-      <div class="bg-black sm:bg-darkBlueCustom w-full mt-24">
+      <div class="bg-HCDark sm:bg-darkBlueCustom w-full mt-24">
         <div
           class="max-w-[1300px] m-auto text-white flex flex-col sm:flex-row items-center py-20 px-8 xl:px-0"
         >
@@ -313,7 +352,7 @@
           </div>
         </div>
       </div>
-      <div class="max-w-[1300px] m-auto mt-24">
+      <div class="max-w-[1300px] hidden md:block px-8 m-auto mt-24">
         <div class="image-set" id="image-1" style="display: block">
           <img src="img/semiannual report.png" />
           <p class="text-center py-16 font-new-order text-3xl">
@@ -527,6 +566,7 @@
     </div>
   </body>
   <script>
+    //
     document.addEventListener("DOMContentLoaded", function () {
       var buttons = document.querySelectorAll(".change-image-button");
       var imageSets = document.querySelectorAll(".image-set");
@@ -553,5 +593,39 @@
         });
       });
     });
+
+    // Video POPUP
+
+    // Open the popup
+    function openPopup() {
+      const popup = document.getElementById("videoPopup");
+      popup.classList.remove("hidden");
+
+      // Listen for ESC key press
+      document.addEventListener("keydown", escKeyListener);
+    }
+
+    // Close the popup
+    function closePopup() {
+      const popup = document.getElementById("videoPopup");
+      const video = popup.querySelector("video");
+
+      // Pause the video and reset playback to the start
+      video.pause();
+      video.currentTime = 0;
+
+      // Hide the popup
+      popup.classList.add("hidden");
+
+      // Remove ESC key listener
+      document.removeEventListener("keydown", escKeyListener);
+    }
+
+    // Close the popup when the ESC key is pressed
+    function escKeyListener(event) {
+      if (event.key === "Escape") {
+        closePopup();
+      }
+    }
   </script>
 </html>
