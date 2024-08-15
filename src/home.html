@@ -12,6 +12,10 @@
       href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&display=swap"
       rel="stylesheet"
     />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
   </head>
   <style>
     img {
@@ -59,7 +63,9 @@
     }
   </style>
   <body>
-    <div class="max-w-[1920px] fixed -top-40 w-3/4 -z-10" style="left: 45%">
+    <div
+      class="max-w-[1920px] fixed top-[-9%] left-[30%] md:-top-40 md:left-[45%] w-full md:w-3/4 -z-10"
+    >
       <img
         src="img/HC-LogoMonster-1024x1024.png"
         alt="Fixed Image"
@@ -67,9 +73,9 @@
       />
     </div>
     <div class="m-auto max-w-[1920px]">
-      <div class="flex justify-center flex-col text-center md:m-24">
+      <div class="flex justify-center mt-24 flex-col text-center md:m-24">
         <h1
-          class="font-new-order font-bold text-black text-3xl sm:text-7xl mb-4"
+          class="font-new-order font-bold text-black text-3xl sm:text-7xl mb-11 md:mb-4"
         >
           Creating a workplace<br />
           where people actually<br />
@@ -85,13 +91,14 @@
         <button>
           <a
             href=""
-            class="font-new-order bg-black text-white py-5 px-10 rounded-full"
+            class="font-new-order bg-black text-white py-3 px-5 sm:py-5 sm:px-10 rounded-full"
             >SEE HOW IT WORKS</a
           >
         </button>
       </div>
-      <div class="grid grid-cols-3 gap-4 p-4 max-w-[1300px] m-auto">
-        <!-- First Row: 1fr 2fr -->
+      <div
+        class="md:grid grid-cols-2 xl:grid-cols-3 gap-4 p-4 hidden max-w-[1300px] m-auto"
+      >
         <div>
           <div
             class="bg-pinkCustom rounded-3xl p-8 flex justify-center flex-col col-span-1"
@@ -141,11 +148,21 @@
               place to work."
             </p>
           </div>
+          <div
+            class="bg-redCustom md:block xl:hidden col-span-1 rounded-3xl p-8"
+          >
+            <img src="img/world.png" style="max-width: 83px" />
+            <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+              The vision
+            </h3>
+            <p class="text-white pt-4 text-xl">
+              A world where healthy organizations create happy employees, who
+              contribute to a happier world.
+            </p>
+          </div>
         </div>
-        <!-- Second Column: 2fr with nested grid -->
-        <div class="col-span-2">
-          <!-- Option 1: 1fr 1fr inside the 2fr column -->
-          <div class="grid grid-cols-2 gap-4">
+        <div class="col-span-1 xl:col-span-2">
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <div class="bg-redCustom rounded-3xl p-8">
               <img src="img/Mission.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
@@ -182,7 +199,7 @@
               </p>
             </div>
           </div>
-          <div class="bg-blueCustom p-8 rounded-3xl mt-4 flex w-full">
+          <div class="bg-blueCustom p-8 hidden xl:flex rounded-3xl mt-4 w-full">
             <!-- Image Column: 1fr -->
             <div class="flex items-center w-1/3">
               <img
@@ -262,7 +279,7 @@
             </div>
           </div>
 
-          <div class="grid grid-cols-2 gap-4 mt-4">
+          <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mt-4">
             <div class="bg-purpleCustom w-full flex rounded-3xl p-8">
               <div class="w-2/4 pr-6">
                 <img src="img/Times.png" />
@@ -278,6 +295,36 @@
             </div>
             <div class="rounded-3xl">
               <img src="img/Hearts not heads podcast.png" />
+            </div>
+          </div>
+        </div>
+        <div
+          class="bg-blueCustom p-8 col-span-2 md:flex xl:hidden rounded-3xl mt-4 w-full"
+        >
+          <div class="flex items-center w-1/3">
+            <img
+              src="img/Garry Ridge.png"
+              style="max-width: 200px; max-height: 244px; object-fit: cover"
+              alt="Garry Ridge"
+              class="rounded-3xl"
+            />
+          </div>
+
+          <div class="w-3/4">
+            <h3 class="font-bold text-2xl uppercase">Feel the Pulse</h3>
+            <p class="pt-4 pb-6 text-base">
+              "Having served as a US public company CEO for 25 years I know
+              success is all about the people we serve.  HeartCount gives
+              leaders the data they need to keep their finger on the pulse, the
+              heartbeat of the company in real time.  HeartCount doesn’t ask how
+              the company is doing, it shows you how your people are feeling.”
+            </p>
+            <div>
+              <p class="font-bold text-base">Garry Ridge</p>
+              <p class="text-base">
+                Chairman Emeritus at WD-40 Company & Co-Founder HeartCount
+                Global
+              </p>
             </div>
           </div>
         </div>
@@ -309,7 +356,7 @@
             </div>
           </div>
         </div>
-        <div class="bg-redCustom col-span-1 rounded-3xl p-8">
+        <div class="bg-redCustom col-span-1 hidden xl:block rounded-3xl p-8">
           <img src="img/world.png" style="max-width: 83px" />
           <h3 class="font-bold text-2xl uppercase pt-6 text-white">
             The vision
@@ -318,6 +365,260 @@
             A world where healthy organizations create happy employees, who
             contribute to a happier world.
           </p>
+        </div>
+      </div>
+      <!-- Mobile view People (Slider) -->
+      <div class="md:hidden mt-11 px-4 relative">
+        <div id="slider-1" class="slider-container overflow-hidden">
+          <div class="flex transition-transform ease-out duration-500">
+            <div
+              class="bg-pinkCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
+            >
+              <img src="img/Sasa Popovic Mobile.png" />
+              <h3 class="font-bold text-2xl uppercase pt-6">
+                Our Origin Story
+              </h3>
+              <p class="py-4 text-base">
+                Meet Sasha, founder of Vega IT, who felt the rhythm of his
+                company fade as it grew from 3 to 800 employees. Feeling a
+                disconnect, HeartCount was built as a lifeline to bridge the gap
+                and nurture the well-being of his employees. Today, HeartCount
+                supports companies globally that prioritize employee engagement
+                and cultivate connections throughout their organizations.
+              </p>
+              <div>
+                <p class="font-bold text-base">Sasa Popovic</p>
+                <p class="text-base">CEO and co-founder of VegaIT</p>
+              </div>
+            </div>
+            <div
+              class="bg-blueCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
+            >
+              <img src="img/Garry Ridge Mobile.png" />
+              <h3 class="font-bold text-2xl uppercase pt-6">Feel the Pulse</h3>
+              <p class="py-4 text-base">
+                "Having served as a US public company CEO for 25 years I know
+                success is all about the people we serve. HeartCount gives
+                leaders the data they need to keep their finger on the pulse,
+                the heartbeat of the company in real time. HeartCount doesn’t
+                ask how the company is doing, it shows you how your people are
+                feeling.”
+              </p>
+              <div>
+                <p class="font-bold text-base">Garry Ridge</p>
+                <p class="text-base">
+                  Chairman Emeritus at WD-40 Company & Co-Founder HeartCount
+                  Global
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-blueCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
+            >
+              <img src="img/Davin Salvagno Mobile.png" />
+              <h3 class="font-bold text-2xl uppercase pt-6">Feel the Pulse</h3>
+              <p class="py-4 text-base">
+                “Every organization starts with a purpose, and they invite
+                people to be a part of that purpose. As they scale, they put
+                processes in place to support their people, they start to
+                measure performance, and hopefully they make a profit. But all
+                too often we start to focus on process, performance, and profit,
+                and we lose the pulse of our purpose and our people. I believe
+                HeartCount was created to help leaders get that pulse back.”
+              </p>
+              <div>
+                <p class="font-bold text-base">Davin Salvagno</p>
+                <p class="text-base">
+                  Founder and CEO of Purpose Point & The Purpose Summit
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div
+          class="absolute bottom-0 left-0 right-0 flex justify-center p-4 space-x-2"
+        >
+          <span
+            data-index="0"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-redCustom"
+          ></span>
+          <span
+            data-index="1"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-redCustom"
+          ></span>
+          <span
+            data-index="2"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-redCustom"
+          ></span>
+        </div>
+      </div>
+      <!-- Mobile view Vision, Mission (Slider) -->
+      <div class="md:hidden mt-11 px-4 relative">
+        <div id="slider-2" class="slider-container overflow-hidden">
+          <div class="flex transition-transform ease-out duration-500">
+            <div
+              class="bg-redCustom md:block xl:hidden rounded-3xl p-8 flex-shrink-0 w-full"
+            >
+              <img src="img/world.png" style="max-width: 83px" />
+              <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+                The vision
+              </h3>
+              <p class="text-white pt-4 text-xl">
+                A world where healthy organizations create happy employees, who
+                contribute to a happier world.
+              </p>
+            </div>
+            <div class="bg-redCustom rounded-3xl p-8 flex-shrink-0 w-full">
+              <img src="img/Mission.png" style="max-width: 83px" />
+              <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+                The mission
+              </h3>
+              <p class="text-white pt-4 text-xl">
+                Build a growing, sustainable movement of organizations who
+                create positive, lasting, people- focused cultures by counting
+                hearts, not heads.
+              </p>
+            </div>
+            <div class="bg-redCustom rounded-3xl p-8 mt-4 flex-shrink-0 w-full">
+              <img src="img/Purpose.png" style="max-width: 83px" />
+              <h3 class="font-bold text-2xl uppercase pt-6 text-white">
+                Our purpose
+              </h3>
+              <p class="text-white pt-4 pb-14 text-xl">
+                Help people be seen, heard, and valued, creating organizations
+                where people feel they belong and know they matter.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div
+          class="absolute bottom-0 left-0 right-0 flex justify-center p-4 space-x-2"
+        >
+          <span
+            data-index="0"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-lightBlueCustom"
+          ></span>
+          <span
+            data-index="1"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-lightBlueCustom"
+          ></span>
+          <span
+            data-index="2"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-lightBlueCustom"
+          ></span>
+        </div>
+      </div>
+      <!-- Mobile view Image, Times, Dusan, Olga (Slider) -->
+      <div class="md:hidden mt-11 px-4 relative">
+        <div id="slider-2" class="slider-container overflow-hidden">
+          <div class="flex transition-transform ease-out duration-500">
+            <div
+              class="rounded-3xl flex-shrink-0 w-full h-[480px] overflow-hidden"
+            >
+              <img
+                src="img/Hearts not heads podcast.png"
+                class="h-full w-full object-cover"
+              />
+            </div>
+
+            <div
+              class="bg-purpleCustom w-full flex-shrink-0 flex rounded-3xl p-8"
+            >
+              <div class="w-2/4 pr-6">
+                <img src="img/Times.png" />
+              </div>
+              <div class="w-2/4">
+                <h3 class="font-bold text-2xl uppercase">CALLING IT QUITS</h3>
+                <p class="pt-4 text-xl">
+                  Build a growing, sustainable movement of organizations who
+                  create positive, lasting, people- focused cultures by counting
+                  hearts, not heads.
+                </p>
+              </div>
+            </div>
+            <div
+              class="bg-grayCustom rounded-3xl flex-shrink-0 w-full p-8 mt-4"
+            >
+              <div class="flex w-full">
+                <div class="w-2/5">
+                  <img src="img/Dusan Milicevic.png" style="max-width: 102px" />
+                </div>
+                <div class="flex justify-end flex-col w-4/5">
+                  <p class="font-bold text-base">Dusan Milicevic</p>
+                  <p class="text-base">
+                    GM at
+                    <span class="underline">Comtrade System Integration</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-sm pt-4">
+                "The Customizable Questions allowed us to focus on specific
+                aspects crucial to our team's success. By implementing
+                Employee's Suggestions gathered through HeartCount we made CTSI
+                a better place to work."
+              </p>
+            </div>
+            <div class="bg-grayCustom rounded-3xl flex-shrink-0 w-full p-8">
+              <div class="flex w-full">
+                <div class="w-2/5">
+                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
+                </div>
+                <div class="flex justify-end flex-col w-4/5">
+                  <p class="font-bold text-base">Olga Arsov</p>
+                  <p class="text-base">
+                    Employee Experience Specialist at
+                    <span class="underline">Headquarters</span>
+                  </p>
+                </div>
+              </div>
+              <p class="text-sm pt-4">
+                HeartCount allows us to determine how our people are feeling and
+                build stronger bonds between teammates. The platform itself
+                supports employers who care for their teams, completely aligning
+                with the fact that the most valuable asset of any organization
+                is their employees. As a professional who'd just started
+                building a career in HR, HeartCount personally helped me set up
+                short term goals for myself and learn how to design proposals
+                concerning EX to upper management.
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Slider controls -->
+        <div
+          class="absolute bottom-0 left-0 right-0 flex justify-center p-4 space-x-2"
+        >
+          <span
+            data-index="0"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-pinkCustom"
+          ></span>
+          <span
+            data-index="1"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-pinkCustom"
+          ></span>
+          <span
+            data-index="2"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-pinkCustom"
+          ></span>
+          <span
+            data-index="3"
+            class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+            data-active-color="bg-pinkCustom"
+          ></span>
         </div>
       </div>
       <div class="bg-HCDark sm:bg-darkBlueCustom w-full mt-24">
@@ -336,6 +637,7 @@
               class="bg-white text-darkBlueCustom font-bold py-4 px-8 text-lg rounded-full"
             >
               Learn More
+              <i class="fa fa-arrow-right pl-1"></i>
             </button>
           </div>
           <div
@@ -484,59 +786,59 @@
           </div>
           <div class="w-full block sm:hidden">
             <div class="flex flex-col items-center mb-4">
-              <div>
+              <div class="max-w-[360px]">
                 <img src="img/mobile-blue-section.png" />
-              </div>
-              <div class="p-7">
-                <h3 class="font-new-order font-bold text-3xl pb-3">
-                  ONBOARDING
-                </h3>
-                <p class="font-plus-jakarta text-base font-normal">
-                  Be operational from the first day. Our customer success team
-                  will ensure a smooth transition and integration of HeartCount
-                  within your organization.  
-                </p>
+                <div class="p-7">
+                  <h3 class="font-new-order font-bold text-3xl pb-3">
+                    ONBOARDING
+                  </h3>
+                  <p class="font-plus-jakarta text-base font-normal">
+                    Be operational from the first day. Our customer success team
+                    will ensure a smooth transition and integration of
+                    HeartCount within your organization.  
+                  </p>
+                </div>
               </div>
             </div>
             <div class="flex flex-col items-center mb-4">
-              <div>
+              <div class="max-w-[360px]">
                 <img src="img/mobile-blue-section.png" />
-              </div>
-              <div class="p-7">
-                <h3 class="font-new-order font-bold text-3xl pb-3">
-                  PERSONALIZED TRAINING
-                </h3>
-                <p class="font-plus-jakarta text-base font-normal">
-                  Our customer success team provides your team members with
-                  guidance on how to utilize HeartCount features to meet their
-                  specific needs and goals. 
-                </p>
+                <div class="p-7">
+                  <h3 class="font-new-order font-bold text-3xl pb-3">
+                    PERSONALIZED TRAINING
+                  </h3>
+                  <p class="font-plus-jakarta text-base font-normal">
+                    Our customer success team provides your team members with
+                    guidance on how to utilize HeartCount features to meet their
+                    specific needs and goals. 
+                  </p>
+                </div>
               </div>
             </div>
             <div class="flex flex-col items-center mb-4">
-              <div>
+              <div class="max-w-[360px]">
                 <img src="img/mobile-blue-section.png" />
-              </div>
-              <div class="p-7">
-                <h3 class="font-new-order font-bold text-3xl pb-3">
-                  DEDICATED SUPPORT
-                </h3>
-                <p class="font-plus-jakarta text-base font-normal">
-                  If you have any questions, concerns, or recommendations along
-                  the way, our customer success team will be there to assist
-                  you. 
-                </p>
+                <div class="p-7">
+                  <h3 class="font-new-order font-bold text-3xl pb-3">
+                    DEDICATED SUPPORT
+                  </h3>
+                  <p class="font-plus-jakarta text-base font-normal">
+                    If you have any questions, concerns, or recommendations
+                    along the way, our customer success team will be there to
+                    assist you. 
+                  </p>
+                </div>
               </div>
             </div>
           </div>
         </div>
       </div>
-      <div class="max-w-[1300px] m-auto my-24">
+      <div class="max-w-[1300px] mx-auto px-4 my-24">
         <h3 class="font-bold text-4xl font-plus-jakarta mb-6">
           Develop Engaged and High-Performing Teams
         </h3>
         <a href="#">SEE ALL ARTICLES</a>
-        <div class="hidden md:flex gap-8 mt-3">
+        <div class="hidden md:flex flex-wrap lg:flex-nowrap gap-8 mt-3">
           <div class="bg-black text-white rounded-3xl">
             <img src="img/blog-placeholder.png" />
             <div class="p-7">
@@ -557,6 +859,7 @@
                   class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                 >
                   READ MORE
+                  <i class="fa fa-arrow-right pl-1"></i>
                 </button>
                 <p>4 minute read</p>
               </div>
@@ -582,6 +885,7 @@
                   class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                 >
                   READ MORE
+                  <i class="fa fa-arrow-right pl-1"></i>
                 </button>
                 <p>4 minute read</p>
               </div>
@@ -607,17 +911,17 @@
                   class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                 >
                   READ MORE
+                  <i class="fa fa-arrow-right pl-1"></i>
                 </button>
                 <p>4 minute read</p>
               </div>
             </div>
           </div>
         </div>
-        <!-- Mobile view (Slider) -->
+        <!-- Mobile view Blogs (Slider) -->
         <div class="md:hidden mt-3 relative">
-          <div id="slider" class="overflow-hidden">
+          <div id="slider-4" class="slider-container overflow-hidden">
             <div class="flex transition-transform ease-out duration-500">
-              <!-- Card 1 -->
               <div class="bg-black text-white rounded-3xl flex-shrink-0 w-full">
                 <img src="img/blog-placeholder.png" />
                 <div class="p-7">
@@ -638,6 +942,7 @@
                       class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                     >
                       READ MORE
+                      <i class="fa fa-arrow-right pl-1"></i>
                     </button>
                     <p>4 minute read</p>
                   </div>
@@ -663,6 +968,7 @@
                       class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                     >
                       READ MORE
+                      <i class="fa fa-arrow-right pl-1"></i>
                     </button>
                     <p>4 minute read</p>
                   </div>
@@ -688,12 +994,12 @@
                       class="bg-white text-black rounded-full py-3 px-5 font-new-order font-semibold"
                     >
                       READ MORE
+                      <i class="fa fa-arrow-right pl-1"></i>
                     </button>
                     <p>4 minute read</p>
                   </div>
                 </div>
               </div>
-              <!-- Repeat for other cards -->
             </div>
           </div>
 
@@ -704,14 +1010,17 @@
             <span
               data-index="0"
               class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+              data-active-color="bg-lightBlueCustom"
             ></span>
             <span
               data-index="1"
               class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+              data-active-color="bg-lightBlueCustom"
             ></span>
             <span
               data-index="2"
               class="slider-dot w-3 h-3 bg-white rounded-full cursor-pointer"
+              data-active-color="bg-lightBlueCustom"
             ></span>
           </div>
         </div>
@@ -783,17 +1092,27 @@
 
     //Slider
 
-    document.querySelectorAll(".slider-dot").forEach((dot) => {
-      dot.addEventListener("click", function () {
-        const index = this.getAttribute("data-index");
-        const slider = document.getElementById("slider").querySelector("div");
-        slider.style.transform = `translateX(-${index * 100}%)`;
+    document.querySelectorAll(".slider-container").forEach((container) => {
+      const dots = container.nextElementSibling.querySelectorAll(".slider-dot");
+      const sliderTrack = container.querySelector("div.flex");
 
-        // Update active dot
-        document
-          .querySelectorAll(".slider-dot")
-          .forEach((d) => d.classList.remove("bg-gray-500"));
-        this.classList.add("bg-gray-500");
+      // Set the first dot as active by default
+      dots[0].classList.remove("bg-white");
+      dots[0].classList.add(dots[0].getAttribute("data-active-color"));
+
+      dots.forEach((dot) => {
+        dot.addEventListener("click", function () {
+          const index = this.getAttribute("data-index");
+          sliderTrack.style.transform = `translateX(-${index * 100}%)`;
+
+          // Update active dot within the same container
+          dots.forEach((d) => {
+            d.classList.remove(d.getAttribute("data-active-color"));
+            d.classList.add("bg-white"); // Reverting the color for non-active dots
+          });
+          this.classList.remove("bg-white"); // Removing white background from the active dot
+          this.classList.add(this.getAttribute("data-active-color"));
+        });
       });
     });
   </script>
