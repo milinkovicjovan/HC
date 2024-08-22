@@ -17,57 +17,76 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
     />
   </head>
-  <style>
-    img {
-      width: 100%;
-      height: auto;
-    }
-    .image-set {
-      display: none;
-    }
-    .image-set img {
-      max-width: 100%;
-      height: auto;
-      border: 20px solid #e9e9e9;
-      border-radius: 30px;
-    }
-    .active-button-slider {
-      background-color: #ccc;
-    }
-
-    .button-change-container {
-      display: flex;
-      justify-content: center;
-    }
-
-    .change-image-button.active-button-slider {
-      background-color: #e05f7e;
-      color: white;
-    }
-
-    /* Button styles */
-    .change-image-button {
-      background-color: white;
-      font-size: 13px;
-      color: black;
-      border: 2.5px solid #e9e9e9;
-      border-radius: 50px;
-      padding: 10px 20px;
-      margin-right: 20px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .change-image-button:last-child {
-      margin-right: 0;
-    }
-  </style>
   <body>
+    <header class="hidden lg:block mt-5 mx-8">
+      <div class="flex justify-between items-center">
+        <div>
+          <img src="./img/Heartcount-Logo-Footer-Header.png" />
+        </div>
+        <div>
+          <ul class="flex items-center gap-7 text-xl font-new-order font-bold">
+            <li>PRODUCT</li>
+            <li>CASE STUDIES</li>
+            <li>RESOURCES</li>
+            <li>CONTACT US</li>
+          </ul>
+        </div>
+        <div>
+          <button
+            class="bg-black text-white py-3 px-3 sm:py-3 sm:px-10 rounded-full"
+          >
+            Book a demo
+          </button>
+        </div>
+      </div>
+    </header>
+    <header class="block lg:hidden sticky top-0 z-50 bg-white">
+      <div class="flex justify-between items-center p-4">
+        <!-- Logo -->
+        <div class="flex items-start justify-start">
+          <img
+            src="./img/Heartcount-Mobile-Small-logo.png"
+            class="max-h-[43px] object-contain"
+          />
+        </div>
+
+        <!-- Burger Menu -->
+        <button
+          class="text-gray-700 focus:outline-none"
+          id="burgerMenu"
+          onclick="toggleMenu()"
+        >
+          <svg
+            class="h-6 w-6"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              stroke-width="2"
+              d="M4 6h16M4 12h16m-7 6h7"
+            ></path>
+          </svg>
+        </button>
+      </div>
+
+      <!-- Mobile Menu -->
+      <ul id="mobileMenu" class="hidden bg-white shadow-lg">
+        <li class="p-4 border-b border-gray-200"><a href="#">Home</a></li>
+        <li class="p-4 border-b border-gray-200"><a href="#">About</a></li>
+        <li class="p-4 border-b border-gray-200"><a href="#">Services</a></li>
+        <li class="p-4"><a href="#">Contact</a></li>
+      </ul>
+    </header>
+
     <div
       class="max-w-[1920px] fixed top-[-9%] left-[30%] md:-top-40 md:left-[45%] w-full md:w-3/4 -z-10"
     >
       <img
-        src="img/HC-LogoMonster-1024x1024.png"
+        src="./img/HC-LogoMonster-1024x1024.png"
         alt="Fixed Image"
         class="h-full w-auto mx-auto"
       />
@@ -103,7 +122,7 @@
           <div
             class="bg-pinkCustom rounded-3xl p-8 flex justify-center flex-col col-span-1"
           >
-            <img src="img/Sasa-Popovic.png" style="max-width: 344px" />
+            <img src="./img/Sasa-Popovic.png" style="max-width: 344px" />
             <h3 class="font-bold text-2xl uppercase pt-6">Our Origin Story</h3>
             <p class="py-4 text-base">
               Meet Sasha, founder of Vega IT, who felt the rhythm of his company
@@ -119,7 +138,7 @@
             </div>
           </div>
           <div class="bg-redCustom rounded-3xl p-8 mt-4">
-            <img src="img/Purpose.png" style="max-width: 83px" />
+            <img src="./img/Purpose.png" style="max-width: 83px" />
             <h3 class="font-bold text-2xl uppercase pt-6 text-white">
               Our purpose
             </h3>
@@ -131,7 +150,7 @@
           <div class="bg-grayCustom rounded-3xl p-8 mt-4">
             <div class="flex w-full">
               <div class="w-2/5">
-                <img src="img/Dusan Milicevic.png" style="max-width: 102px" />
+                <img src="./img/Dusan Milicevic.png" style="max-width: 102px" />
               </div>
               <div class="flex justify-end flex-col w-4/5">
                 <p class="font-bold text-base">Dusan Milicevic</p>
@@ -151,7 +170,7 @@
           <div
             class="bg-redCustom md:block xl:hidden col-span-1 rounded-3xl p-8"
           >
-            <img src="img/world.png" style="max-width: 83px" />
+            <img src="./img/world.png" style="max-width: 83px" />
             <h3 class="font-bold text-2xl uppercase pt-6 text-white">
               The vision
             </h3>
@@ -164,7 +183,7 @@
         <div class="col-span-1 xl:col-span-2">
           <div class="grid grid-cols-1 xl:grid-cols-2 gap-4">
             <div class="bg-redCustom rounded-3xl p-8">
-              <img src="img/Mission.png" style="max-width: 83px" />
+              <img src="./img/Mission.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
                 The mission
               </h3>
@@ -177,7 +196,7 @@
             <div class="bg-grayCustom rounded-3xl p-8">
               <div class="flex w-full">
                 <div class="w-2/5">
-                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
+                  <img src="./img/Olga Arsov.png" style="max-width: 102px" />
                 </div>
                 <div class="flex justify-end flex-col w-4/5">
                   <p class="font-bold text-base">Olga Arsov</p>
@@ -203,7 +222,7 @@
             <!-- Image Column: 1fr -->
             <div class="flex items-center w-1/3">
               <img
-                src="img/Garry Ridge.png"
+                src="./img/Garry Ridge.png"
                 style="max-width: 200px; max-height: 244px; object-fit: cover"
                 alt="Garry Ridge"
                 class="rounded-3xl"
@@ -234,7 +253,7 @@
           <div class="mt-4 relative w-full max-h-80">
             <!-- Video -->
             <video
-              src="img/HC_video.mp4"
+              src="./img/HC_video.mp4"
               autoplay
               loop
               muted
@@ -244,7 +263,7 @@
 
             <!-- Play Button -->
             <img
-              src="img/Play.png"
+              src="./img/Play.png"
               alt="Play Button"
               class="absolute top-4 right-4 cursor-pointer w-12 h-12"
               onclick="openPopup()"
@@ -270,7 +289,7 @@
               </button>
               <!-- Popup Video -->
               <video
-                src="img/HC_popup.mp4"
+                src="./img/HC_popup.mp4"
                 controls
                 autoplay
                 muted
@@ -282,7 +301,7 @@
           <div class="grid grid-cols-1 xl:grid-cols-2 gap-4 mt-4">
             <div class="bg-purpleCustom w-full flex rounded-3xl p-8">
               <div class="w-2/4 pr-6">
-                <img src="img/Times.png" />
+                <img src="./img/Times.png" />
               </div>
               <div class="w-2/4">
                 <h3 class="font-bold text-2xl uppercase">CALLING IT QUITS</h3>
@@ -294,7 +313,7 @@
               </div>
             </div>
             <div class="rounded-3xl">
-              <img src="img/Hearts not heads podcast.png" />
+              <img src="./img/Hearts not heads podcast.png" />
             </div>
           </div>
         </div>
@@ -303,7 +322,7 @@
         >
           <div class="flex items-center w-1/3">
             <img
-              src="img/Garry Ridge.png"
+              src="./img/Garry Ridge.png"
               style="max-width: 200px; max-height: 244px; object-fit: cover"
               alt="Garry Ridge"
               class="rounded-3xl"
@@ -331,7 +350,7 @@
         <div class="bg-blueCustom col-span-2 p-8 rounded-3xl flex w-full">
           <div class="flex w-1/3">
             <img
-              src="img/Davin Salvagno.png"
+              src="./img/Davin Salvagno.png"
               style="max-width: 230px; max-height: 220px; object-fit: cover"
               alt="Garry Ridge"
               class="rounded-3xl"
@@ -357,7 +376,7 @@
           </div>
         </div>
         <div class="bg-redCustom col-span-1 hidden xl:block rounded-3xl p-8">
-          <img src="img/world.png" style="max-width: 83px" />
+          <img src="./img/world.png" style="max-width: 83px" />
           <h3 class="font-bold text-2xl uppercase pt-6 text-white">
             The vision
           </h3>
@@ -374,7 +393,7 @@
             <div
               class="bg-pinkCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
             >
-              <img src="img/Sasa Popovic Mobile.png" />
+              <img src="./img/Sasa Popovic Mobile.png" />
               <h3 class="font-bold text-2xl uppercase pt-6">
                 Our Origin Story
               </h3>
@@ -394,7 +413,7 @@
             <div
               class="bg-blueCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
             >
-              <img src="img/Garry Ridge Mobile.png" />
+              <img src="./img/Garry Ridge Mobile.png" />
               <h3 class="font-bold text-2xl uppercase pt-6">Feel the Pulse</h3>
               <p class="py-4 text-base">
                 "Having served as a US public company CEO for 25 years I know
@@ -415,7 +434,7 @@
             <div
               class="bg-blueCustom rounded-3xl p-8 flex-shrink-0 w-full flex flex-col justify-center"
             >
-              <img src="img/Davin Salvagno Mobile.png" />
+              <img src="./img/Davin Salvagno Mobile.png" />
               <h3 class="font-bold text-2xl uppercase pt-6">Feel the Pulse</h3>
               <p class="py-4 text-base">
                 “Every organization starts with a purpose, and they invite
@@ -464,7 +483,7 @@
             <div
               class="bg-redCustom md:block xl:hidden rounded-3xl p-8 flex-shrink-0 w-full"
             >
-              <img src="img/world.png" style="max-width: 83px" />
+              <img src="./img/world.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
                 The vision
               </h3>
@@ -474,7 +493,7 @@
               </p>
             </div>
             <div class="bg-redCustom rounded-3xl p-8 flex-shrink-0 w-full">
-              <img src="img/Mission.png" style="max-width: 83px" />
+              <img src="./img/Mission.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
                 The mission
               </h3>
@@ -485,7 +504,7 @@
               </p>
             </div>
             <div class="bg-redCustom rounded-3xl p-8 mt-4 flex-shrink-0 w-full">
-              <img src="img/Purpose.png" style="max-width: 83px" />
+              <img src="./img/Purpose.png" style="max-width: 83px" />
               <h3 class="font-bold text-2xl uppercase pt-6 text-white">
                 Our purpose
               </h3>
@@ -526,7 +545,7 @@
               class="rounded-3xl flex-shrink-0 w-full h-[480px] overflow-hidden"
             >
               <img
-                src="img/Hearts not heads podcast.png"
+                src="./img/Hearts not heads podcast.png"
                 class="h-full w-full object-cover"
               />
             </div>
@@ -535,7 +554,7 @@
               class="bg-purpleCustom w-full flex-shrink-0 flex rounded-3xl p-8"
             >
               <div class="w-2/4 pr-6">
-                <img src="img/Times.png" />
+                <img src="./img/Times.png" />
               </div>
               <div class="w-2/4">
                 <h3 class="font-bold text-2xl uppercase">CALLING IT QUITS</h3>
@@ -551,7 +570,10 @@
             >
               <div class="flex w-full">
                 <div class="w-2/5">
-                  <img src="img/Dusan Milicevic.png" style="max-width: 102px" />
+                  <img
+                    src="./img/Dusan Milicevic.png"
+                    style="max-width: 102px"
+                  />
                 </div>
                 <div class="flex justify-end flex-col w-4/5">
                   <p class="font-bold text-base">Dusan Milicevic</p>
@@ -571,7 +593,7 @@
             <div class="bg-grayCustom rounded-3xl flex-shrink-0 w-full p-8">
               <div class="flex w-full">
                 <div class="w-2/5">
-                  <img src="img/Olga Arsov.png" style="max-width: 102px" />
+                  <img src="./img/Olga Arsov.png" style="max-width: 102px" />
                 </div>
                 <div class="flex justify-end flex-col w-4/5">
                   <p class="font-bold text-base">Olga Arsov</p>
@@ -643,20 +665,23 @@
           <div
             class="w-full sm:w-2/3 pt-10 sm:pt-0 sm:pl-24 flex flex-wrap gap-4"
           >
-            <img src="img/slack.png" class="w-20 h-20" />
-            <img src="img/Google workspace.png" class="w-20 h-20" />
-            <img src="img/Frame 78.png" class="w-20 h-20" />
-            <img src="img/acta.png" class="w-20 h-20" />
-            <img src="img/paycor.png" class="w-20 h-20" />
-            <img src="img/w.png" class="w-20 h-20" />
-            <img src="img/sap.png" class="w-20 h-20" />
-            <img src="img/adp.png" class="w-20 h-20" />
+            <img src="./img/slack.png" class="w-20 h-20" />
+            <img src="./img/Google workspace.png" class="w-20 h-20" />
+            <img src="./img/Frame 78.png" class="w-20 h-20" />
+            <img src="./img/acta.png" class="w-20 h-20" />
+            <img src="./img/paycor.png" class="w-20 h-20" />
+            <img src="./img/w.png" class="w-20 h-20" />
+            <img src="./img/sap.png" class="w-20 h-20" />
+            <img src="./img/adp.png" class="w-20 h-20" />
           </div>
         </div>
       </div>
       <div class="max-w-[1300px] hidden md:block px-8 m-auto mt-24">
-        <div class="image-set" id="image-1" style="display: block">
-          <img src="img/semiannual report.png" />
+        <div class="image-set hidden" id="image-1" style="display: block">
+          <img
+            src="./img/semiannual report.png"
+            class="max-w-full h-auto rounded-[30px] border-[20px] border-solid border-[#e9e9e9]"
+          />
           <p class="text-center py-16 font-new-order text-3xl">
             The Semi-Annual Report offers a comprehensive summary of your
             company’s status over the two halves of each year, focusing on
@@ -667,8 +692,11 @@
             includes an in-depth analysis of every survey question.
           </p>
         </div>
-        <div class="image-set" id="image-2">
-          <img src="img/summary.png" />
+        <div class="image-set hidden" id="image-2">
+          <img
+            src="./img/summary.png"
+            class="max-w-full h-auto rounded-[30px] border-[20px] border-solid border-[#e9e9e9]"
+          />
           <p class="text-center py-16 font-new-order text-3xl">
             The Summary Page is your starting point when you log into the
             portal<br />
@@ -678,18 +706,27 @@
             over time (monthly, quarterly, semi-annually, and annually).
           </p>
         </div>
-        <div class="image-set mb-16" id="image-3">
-          <img src="img/employee overview.png" />
+        <div class="image-set hidden mb-16" id="image-3">
+          <img
+            src="./img/employee overview.png"
+            class="max-w-full h-auto rounded-[30px] border-[20px] border-solid border-[#e9e9e9]"
+          />
         </div>
-        <div class="image-set mb-16" id="image-4">
-          <img src="img/teams overview.png" />
+        <div class="image-set hidden mb-16" id="image-4">
+          <img
+            src="./img/teams overview.png"
+            class="max-w-full h-auto rounded-[30px] border-[20px] border-solid border-[#e9e9e9]"
+          />
         </div>
-        <div class="image-set mb-16" id="image-5">
-          <img src="img/feedforward.png" />
+        <div class="image-set hidden mb-16" id="image-5">
+          <img
+            src="./img/feedforward.png"
+            class="max-w-full h-auto rounded-[30px] border-[20px] border-solid border-[#e9e9e9]"
+          />
         </div>
 
         <!-- Buttons -->
-        <div class="button-change-container">
+        <div class="flex justify-center">
           <button
             class="change-image-button active-button-slider"
             data-target="image-1"
@@ -705,7 +742,7 @@
           <button class="change-image-button" data-target="image-4">
             TEAMS OVERVIEW
           </button>
-          <button class="change-image-button" data-target="image-5">
+          <button class="change-image-button mr-0" data-target="image-5">
             FEEDFORWARD
           </button>
         </div>
@@ -732,7 +769,7 @@
             <div class="flex items-center mb-4">
               <div>
                 <img
-                  src="img/employees-placeholder.png"
+                  src="./img/employees-placeholder.png"
                   class="min-w-[400px] pr-7"
                 />
               </div>
@@ -750,7 +787,7 @@
             <div class="flex items-center mb-4">
               <div>
                 <img
-                  src="img/employees-placeholder.png"
+                  src="./img/employees-placeholder.png"
                   class="min-w-[400px] pr-7"
                 />
               </div>
@@ -768,7 +805,7 @@
             <div class="flex items-center mb-4">
               <div>
                 <img
-                  src="img/employees-placeholder.png"
+                  src="./img/employees-placeholder.png"
                   class="min-w-[400px] pr-7"
                 />
               </div>
@@ -787,7 +824,7 @@
           <div class="w-full block sm:hidden">
             <div class="flex flex-col items-center mb-4">
               <div class="max-w-[360px]">
-                <img src="img/mobile-blue-section.png" />
+                <img src="./img/mobile-blue-section.png" />
                 <div class="p-7">
                   <h3 class="font-new-order font-bold text-3xl pb-3">
                     ONBOARDING
@@ -802,7 +839,7 @@
             </div>
             <div class="flex flex-col items-center mb-4">
               <div class="max-w-[360px]">
-                <img src="img/mobile-blue-section.png" />
+                <img src="./img/mobile-blue-section.png" />
                 <div class="p-7">
                   <h3 class="font-new-order font-bold text-3xl pb-3">
                     PERSONALIZED TRAINING
@@ -817,7 +854,7 @@
             </div>
             <div class="flex flex-col items-center mb-4">
               <div class="max-w-[360px]">
-                <img src="img/mobile-blue-section.png" />
+                <img src="./img/mobile-blue-section.png" />
                 <div class="p-7">
                   <h3 class="font-new-order font-bold text-3xl pb-3">
                     DEDICATED SUPPORT
@@ -840,7 +877,7 @@
         <a href="#">SEE ALL ARTICLES</a>
         <div class="hidden md:flex flex-wrap lg:flex-nowrap gap-8 mt-3">
           <div class="bg-black text-white rounded-3xl">
-            <img src="img/blog-placeholder.png" />
+            <img src="./img/blog-placeholder.png" />
             <div class="p-7">
               <div class="flex justify-between items-center">
                 <p>2 October</p>
@@ -866,7 +903,7 @@
             </div>
           </div>
           <div class="bg-black text-white rounded-3xl">
-            <img src="img/blog-placeholder.png" />
+            <img src="./img/blog-placeholder.png" />
             <div class="p-7">
               <div class="flex justify-between items-center">
                 <p>2 October</p>
@@ -892,7 +929,7 @@
             </div>
           </div>
           <div class="bg-black text-white rounded-3xl">
-            <img src="img/blog-placeholder.png" />
+            <img src="./img/blog-placeholder.png" />
             <div class="p-7">
               <div class="flex justify-between items-center">
                 <p>2 October</p>
@@ -923,7 +960,7 @@
           <div id="slider-4" class="slider-container overflow-hidden">
             <div class="flex transition-transform ease-out duration-500">
               <div class="bg-black text-white rounded-3xl flex-shrink-0 w-full">
-                <img src="img/blog-placeholder.png" />
+                <img src="./img/blog-placeholder.png" />
                 <div class="p-7">
                   <div class="flex justify-between items-center">
                     <p>2 October</p>
@@ -949,7 +986,7 @@
                 </div>
               </div>
               <div class="bg-black text-white rounded-3xl flex-shrink-0 w-full">
-                <img src="img/blog-placeholder.png" />
+                <img src="./img/blog-placeholder.png" />
                 <div class="p-7">
                   <div class="flex justify-between items-center">
                     <p>2 October</p>
@@ -975,7 +1012,7 @@
                 </div>
               </div>
               <div class="bg-black text-white rounded-3xl flex-shrink-0 w-full">
-                <img src="img/blog-placeholder.png" />
+                <img src="./img/blog-placeholder.png" />
                 <div class="p-7">
                   <div class="flex justify-between items-center">
                     <p>2 October</p>
@@ -1026,6 +1063,138 @@
         </div>
       </div>
     </div>
+    <footer class="bg-pinkCustom hidden sm:block">
+      <div
+        class="max-w-[1300px] pt-20 mx-auto flex flex-col justify-center items-center"
+      >
+        <img
+          src="./img/Heartcount-Logo-Footer-Header.png"
+          class="max-w-[211px] mb-9"
+        />
+        <ul class="flex flex-row gap-7 items-center mb-20">
+          <li><a>ABOUT</a></li>
+          <li><a>ACCOUNT</a></li>
+          <li><a>SUPPORT</a></li>
+          <li><a>PRIVACY</a></li>
+        </ul>
+        <ul class="flex gap-7 items-center mb-8">
+          <li>
+            <a href="https://www.linkedin.com/company/heartcountapp">
+              <img src="./img/LinkedIn.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/heartcountapp">
+              <img src="./img/Instagram.png" />
+            </a>
+          </li>
+          <li>
+            <a href="https://www.youtube.com/@heartcount">
+              <img src="./img/YouTube.png" />
+            </a>
+          </li>
+        </ul>
+        <p class="mb-12">© 2024 HeartCount</p>
+      </div>
+    </footer>
+    <footer class="bg-white p-4 block sm:hidden">
+      <ul class="space-y-4">
+        <li class="mb-5 border-b-2 border-[#EAEAEA] pb-2">
+          <button
+            class="w-full text-left flex justify-between items-center"
+            onclick="toggleAccordion('productAccordion', 'productArrow')"
+          >
+            Product
+            <i
+              id="productArrow"
+              class="fas fa-chevron-right transform transition-transform"
+            ></i>
+          </button>
+          <ul id="productAccordion" class="hidden py-5">
+            <li class="">Product Item 1</li>
+            <li class="">Product Item 2</li>
+            <li class="">Product Item 3</li>
+          </ul>
+        </li>
+        <li class="mb-5 border-b-2 border-[#EAEAEA] pb-2">
+          <button
+            class="w-full text-left flex justify-between items-center"
+            onclick="toggleAccordion('heartCountAccordion', 'heartCountArrow')"
+          >
+            HeartCount
+            <i
+              id="heartCountArrow"
+              class="fas fa-chevron-right transform transition-transform"
+            ></i>
+          </button>
+          <ul id="heartCountAccordion" class="hidden py-5">
+            <li class="">HeartCount Item 1</li>
+            <li class="">HeartCount Item 2</li>
+            <li class="">HeartCount Item 3</li>
+          </ul>
+        </li>
+        <li class="mb-5 border-b-2 border-[#EAEAEA] pb-2">
+          <button
+            class="w-full text-left flex justify-between items-center"
+            onclick="toggleAccordion('aboutAccordion', 'aboutArrow')"
+          >
+            About
+            <i
+              id="aboutArrow"
+              class="fas fa-chevron-right transform transition-transform"
+            ></i>
+          </button>
+          <ul id="aboutAccordion" class="hidden py-5">
+            <li class="">About Us</li>
+            <li class="">Our Team</li>
+            <li class="">Careers</li>
+          </ul>
+        </li>
+        <li class="mb-5 border-b-2 border-[#EAEAEA] pb-2">
+          <button
+            class="w-full text-left flex justify-between items-center"
+            onclick="toggleAccordion('accountAccordion', 'accountArrow')"
+          >
+            Account
+            <i
+              id="accountArrow"
+              class="fas fa-chevron-right transform transition-transform"
+            ></i>
+          </button>
+          <ul id="accountAccordion" class="hidden py-5">
+            <li class="">Login</li>
+            <li class="">Register</li>
+            <li class="">Profile</li>
+          </ul>
+        </li>
+        <li class="mb-5 border-b-2 border-[#EAEAEA] pb-2">
+          <button
+            class="w-full text-left flex justify-between items-center"
+            onclick="toggleAccordion('followUsAccordion', 'followUsArrow')"
+          >
+            Follow us
+            <i
+              id="followUsArrow"
+              class="fas fa-chevron-right transform transition-transform"
+            ></i>
+          </button>
+          <ul id="followUsAccordion" class="hidden py-5">
+            <li class="">Facebook</li>
+            <li class="">Twitter</li>
+            <li class="">Instagram</li>
+          </ul>
+        </li>
+      </ul>
+      <div class="mt-6 flex justify-between items-center w-full">
+        <div class="flex items-start justify-start">
+          <img
+            src="./img/Heartcount-Mobile-Small-logo.png"
+            class="max-h-[43px] object-contain"
+          />
+        </div>
+        <span class="w-2/4 text-end">© 2024 HeartCount</span>
+      </div>
+    </footer>
   </body>
   <script>
     //
@@ -1115,5 +1284,44 @@
         });
       });
     });
+
+    // Header Hamburger
+    document.addEventListener("DOMContentLoaded", function () {
+      const burgerMenu = document.getElementById("burgerMenu");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const menuWrapper = document.querySelector("header");
+
+      // Toggle menu visibility
+      burgerMenu.addEventListener("click", function (event) {
+        event.stopPropagation(); // Prevents the click from being passed to the document
+        mobileMenu.classList.toggle("hidden");
+      });
+
+      // Close menu when clicking outside of it
+      document.addEventListener("click", function (event) {
+        if (!menuWrapper.contains(event.target)) {
+          mobileMenu.classList.add("hidden");
+        }
+      });
+
+      // Prevent closing the menu when clicking inside the menu itself
+      mobileMenu.addEventListener("click", function (event) {
+        event.stopPropagation();
+      });
+    });
+
+    // Footer accordion
+    function toggleAccordion(accordionId, arrowId) {
+      const accordion = document.getElementById(accordionId);
+      const arrow = document.getElementById(arrowId);
+      accordion.classList.toggle("hidden");
+      if (accordion.classList.contains("hidden")) {
+        arrow.classList.remove("fa-chevron-down");
+        arrow.classList.add("fa-chevron-right");
+      } else {
+        arrow.classList.remove("fa-chevron-right");
+        arrow.classList.add("fa-chevron-down");
+      }
+    }
   </script>
 </html>
